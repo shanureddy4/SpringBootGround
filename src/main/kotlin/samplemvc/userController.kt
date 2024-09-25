@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 class UserController {
 
     @GetMapping("/user")
-    fun getUser():User {
-        return User(1, "John", "john@gmail.com")
+    fun getUser(userService: UserService):User {
+        return userService.getUser()
     }
 }
